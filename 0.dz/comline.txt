@@ -1,0 +1,199 @@
+vofran@pr2-11 /.home/student1/vofran/objektno/2v $ git clone https://github.com/PMF-MO-MJ/intro-nesto123.git
+-kloniranje git filea
+--
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git submodule init
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git submodule update
+-2. korak
+--
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ mkdir build
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ cd build
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123/build $ cmake ..
+-napravit build dir. i unutra cmake ..
+--
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123/build $ make test
+-provjera prolaze li testovi
+--
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123/build $ make test
+Running tests...
+Test project /.home/student1/vofran/objektno/2v/intro-nesto123/build
+    Start 1: test_zad
+1/1 Test #1: test_zad .........................   Passed    0.02 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.08 sec
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123/build $ cd test
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123/build/test $ ls
+CMakeFiles  cmake_install.cmake  CTestTestfile.cmake  Makefile  test_zad
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123/build/test $ ./test_zad [==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from INTRO
+[ RUN      ] INTRO.Zadatak
+[       OK ] INTRO.Zadatak (0 ms)
+[----------] 1 test from INTRO (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (0 ms total)
+[  PASSED  ] 1 test.
+
+-za detalje ako test nije prošo, jedan po jedan izvršit
+-----------------------------------------------------------------
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   src/zadatak.cpp
+	modified:   test/test-zad.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	build/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git add src/zadatak.cpp
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   src/zadatak.cpp
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   test/test-zad.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	build/
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git add src/test-zad.cpp
+fatal: pathspec 'src/test-zad.cpp' did not match any files
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git add src/test/test-zad.cpp
+fatal: pathspec 'src/test/test-zad.cpp' did not match any files
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git add test/test-zad.cpp
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git add build/
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git comit
+git: 'comit' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git commit
+Aborting commit due to empty commit message.
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   build/CMakeCache.txt
+	new file:   build/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake
+	new file:   build/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin
+	new file:   build/CMakeFiles/3.5.1/CMakeSystem.cmake
+	new file:   build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+	new file:   build/CMakeFiles/3.5.1/CompilerIdCXX/a.out
+	new file:   build/CMakeFiles/CMakeDirectoryInformation.cmake
+	new file:   build/CMakeFiles/CMakeOutput.log
+	new file:   build/CMakeFiles/Makefile.cmake
+	new file:   build/CMakeFiles/Makefile2
+	new file:   build/CMakeFiles/TargetDirectories.txt
+	new file:   build/CMakeFiles/cmake.check_cache
+	new file:   build/CMakeFiles/feature_tests.bin
+	new file:   build/CMakeFiles/feature_tests.cxx
+	new file:   build/CMakeFiles/googletest.dir/CXX.includecache
+	new file:   build/CMakeFiles/googletest.dir/DependInfo.cmake
+	new file:   build/CMakeFiles/googletest.dir/build.make
+	new file:   build/CMakeFiles/googletest.dir/cmake_clean.cmake
+	new file:   build/CMakeFiles/googletest.dir/cmake_clean_target.cmake
+	new file:   build/CMakeFiles/googletest.dir/depend.internal
+	new file:   build/CMakeFiles/googletest.dir/depend.make
+	new file:   build/CMakeFiles/googletest.dir/external/googletest/googletest/src/gtest-all.cc.o
+	new file:   build/CMakeFiles/googletest.dir/external/googletest/googletest/src/gtest_main.cc.o
+	new file:   build/CMakeFiles/googletest.dir/flags.make
+	new file:   build/CMakeFiles/googletest.dir/link.txt
+	new file:   build/CMakeFiles/googletest.dir/progress.make
+	new file:   build/CMakeFiles/progress.marks
+	new file:   build/CTestTestfile.cmake
+	new file:   build/Makefile
+	new file:   build/Testing/Temporary/CTestCostData.txt
+	new file:   build/Testing/Temporary/LastTest.log
+	new file:   build/cmake_install.cmake
+	new file:   build/intro.cbp
+	new file:   build/libgoogletest.a
+	new file:   build/src/CMakeFiles/CMakeDirectoryInformation.cmake
+	new file:   build/src/CMakeFiles/intro.dir/CXX.includecache
+	new file:   build/src/CMakeFiles/intro.dir/DependInfo.cmake
+	new file:   build/src/CMakeFiles/intro.dir/build.make
+	new file:   build/src/CMakeFiles/intro.dir/cmake_clean.cmake
+	new file:   build/src/CMakeFiles/intro.dir/depend.internal
+	new file:   build/src/CMakeFiles/intro.dir/depend.make
+	new file:   build/src/CMakeFiles/intro.dir/flags.make
+	new file:   build/src/CMakeFiles/intro.dir/link.txt
+	new file:   build/src/CMakeFiles/intro.dir/main.cpp.o
+	new file:   build/src/CMakeFiles/intro.dir/progress.make
+	new file:   build/src/CMakeFiles/intro_lib.dir/CXX.includecache
+	new file:   build/src/CMakeFiles/intro_lib.dir/DependInfo.cmake
+	new file:   build/src/CMakeFiles/intro_lib.dir/build.make
+	new file:   build/src/CMakeFiles/intro_lib.dir/cmake_clean.cmake
+	new file:   build/src/CMakeFiles/intro_lib.dir/cmake_clean_target.cmake
+	new file:   build/src/CMakeFiles/intro_lib.dir/depend.internal
+	new file:   build/src/CMakeFiles/intro_lib.dir/depend.make
+	new file:   build/src/CMakeFiles/intro_lib.dir/flags.make
+	new file:   build/src/CMakeFiles/intro_lib.dir/link.txt
+	new file:   build/src/CMakeFiles/intro_lib.dir/progress.make
+	new file:   build/src/CMakeFiles/intro_lib.dir/zadatak.cpp.o
+	new file:   build/src/CMakeFiles/progress.marks
+	new file:   build/src/CMakeLists.txt
+	new file:   build/src/CTestTestfile.cmake
+	new file:   build/src/Makefile
+	new file:   build/src/cmake_install.cmake
+	new file:   build/src/intro
+	new file:   build/src/libintro_lib.a
+	new file:   build/test/CMakeFiles/CMakeDirectoryInformation.cmake
+	new file:   build/test/CMakeFiles/progress.marks
+	new file:   build/test/CMakeFiles/test_zad.dir/CXX.includecache
+	new file:   build/test/CMakeFiles/test_zad.dir/DependInfo.cmake
+	new file:   build/test/CMakeFiles/test_zad.dir/build.make
+	new file:   build/test/CMakeFiles/test_zad.dir/cmake_clean.cmake
+	new file:   build/test/CMakeFiles/test_zad.dir/depend.internal
+	new file:   build/test/CMakeFiles/test_zad.dir/depend.make
+	new file:   build/test/CMakeFiles/test_zad.dir/flags.make
+	new file:   build/test/CMakeFiles/test_zad.dir/link.txt
+	new file:   build/test/CMakeFiles/test_zad.dir/progress.make
+	new file:   build/test/CMakeFiles/test_zad.dir/test-zad.cpp.o
+	new file:   build/test/CTestTestfile.cmake
+	new file:   build/test/Makefile
+	new file:   build/test/cmake_install.cmake
+	new file:   build/test/test_zad
+	modified:   src/zadatak.cpp
+	modified:   test/test-zad.cpp
+
+
+-vratit sve na git :wq -enter (za izać iz kurca
+----------------------------------
+
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ git push origin masterUsername for 'https://github.com': vofran@student.math.hr
+Password for 'https://vofran@student.math.hr@github.com': 
+Everything up-to-date
+vofran@pr2-11 /.home/student1/vofran/objektno/2v/intro-nesto123 $ 
+
+-poslat sve na github
+
+-----------------------------------
+
+
+
+
+

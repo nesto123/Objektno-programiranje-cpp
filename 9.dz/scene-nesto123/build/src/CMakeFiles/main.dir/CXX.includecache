@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/game.cpp
+game.h
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/game.h
+
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/game.h
+SFML/Graphics.hpp
+-
+sceneGraph.h
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/sceneGraph.h
+
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/main.cpp
+game.h
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/game.h
+
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/sceneGraph.cpp
+sceneGraph.h
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/sceneGraph.h
+
+/home/fran/Documents/obj/dz/9.dz/scene-nesto123/src/sceneGraph.h
+memory
+-
+list
+-
+iostream
+-
+SFML/Graphics.hpp
+-
+
