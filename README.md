@@ -3,9 +3,9 @@
 
 Ak. godina 2017/2018
 
-Za Googletest:
+Mod Googletest:
   -- git submodule init
   -- git submodule update
   
-Za SFML:
+Mod SFML:
 
